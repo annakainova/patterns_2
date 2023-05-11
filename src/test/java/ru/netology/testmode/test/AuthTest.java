@@ -26,9 +26,6 @@ class AuthTest {
         $("[data-test-id='login'] input").sendKeys(registeredUser.getLogin());
         $("[data-test-id='password'] input").sendKeys(registeredUser.getPassword());
         $(".button__text").click();
-        // TODO: добавить логику теста, в рамках которого будет выполнена попытка входа в личный кабинет с учётными
-        //  данными зарегистрированного активного пользователя, для заполнения полей формы используйте
-        //  пользователя registeredUser
     }
 
     @Test
@@ -38,8 +35,6 @@ class AuthTest {
         $("[data-test-id='login'] input").sendKeys(notRegisteredUser.getLogin());
         $("[data-test-id='password'] input").sendKeys(notRegisteredUser.getPassword());
         $(".button__text").click();
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет
-        //  незарегистрированного пользователя, для заполнения полей формы используйте пользователя notRegisteredUser
     }
 
     @Test
@@ -49,8 +44,6 @@ class AuthTest {
         $("[data-test-id='login'] input").sendKeys(blockedUser.getLogin());
         $("[data-test-id='password'] input").sendKeys(blockedUser.getPassword());
         $(".button__text").click();
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет,
-        //  заблокированного пользователя, для заполнения полей формы используйте пользователя blockedUser
     }
 
     @Test
@@ -61,9 +54,6 @@ class AuthTest {
         $("[data-test-id='login'] input").sendKeys(wrongLogin);
         $("[data-test-id='password'] input").sendKeys(registeredUser.getPassword());
         $(".button__text").click();
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  логином, для заполнения поля формы "Логин" используйте переменную wrongLogin,
-        //  "Пароль" - пользователя registeredUser
     }
 
     @Test
@@ -74,8 +64,5 @@ class AuthTest {
         $("[data-test-id='login'] input").sendKeys(registeredUser.getLogin());
         $("[data-test-id='password'] input").sendKeys(wrongPassword);
         $(".button__text").click();
-        // TODO: добавить логику теста в рамках которого будет выполнена попытка входа в личный кабинет с неверным
-        //  паролем, для заполнения поля формы "Логин" используйте пользователя registeredUser,
-        //  "Пароль" - переменную wrongPassword
     }
 }
